@@ -10,6 +10,9 @@ build: ## Build the application
 test: ## Run tests
 	@$(GO_BIN) test ./...
 
+coverage: ## Run tests with coverage
+	@$(GO_BIN) test -cover ./...
+
 clean: ## Clean up generate files, like binaries and cached tests
 	@$(GO_BIN) clean -testcache
 	@rm -f $(BINARY_NAME)
